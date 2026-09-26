@@ -16,7 +16,7 @@ const bio = ref({
   <main class="flex min-h-screen flex-col items-center px-4 py-8 sm:py-12">
     <RouterLink 
       to="/" 
-      class="my-8 self-start text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-green-400 hover:underline"
+      class="my-8 self-start text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-blue-400 hover:underline"
     >
       ⬅ Back to Links
     </RouterLink>
@@ -28,7 +28,7 @@ const bio = ref({
       <!-- Header -->
       <div class="mb-6 flex flex-col items-center text-center sm:flex-row sm:text-left">
         <div 
-          class="mb-4 h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-green-400 sm:mb-0 sm:mr-6"
+          class="mb-4 h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-blue-400 sm:mb-0 sm:mr-6"
         >
           <img 
             :src="bio.avatar"
@@ -55,7 +55,7 @@ const bio = ref({
           <span
             v-for="skill in bio.skills"
             :key="skill"
-            class="rounded-full bg-green-900/50 px-3 py-1 text-sm text-green-300"
+            class="rounded-full bg-blue-900/50 px-3 py-1 text-sm text-blue-300"
           >
             {{ skill }}
           </span>
@@ -67,7 +67,7 @@ const bio = ref({
         <h2 class="mb-3 text-lg font-semibold text-white">Get in Touch</h2>
         <a 
           :href="'mailto:${bio.email}'"
-          class="group inline-flex items-center gap-2 rounded-xl bg-green-500 px-6 py-3 font-medium text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-105 hover:bg-green-600 hover:shadow-xl hover:shadow-green-500/40 active:scale-95"
+          class="group inline-flex items-center gap-2 rounded-xl bg-blue-500 px-6 py-3 font-medium text-white shadow-lg shadow-blue-500/30 transition-all duration-200 hover:scale-105 hover:bg-blue-600 hover:shadow-xl hover:shadow-blue-500/40 active:scale-95"
         >
           <svg 
             data-slot="icon" 

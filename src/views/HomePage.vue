@@ -6,7 +6,30 @@ const profile = ref({
   name: 'Khrystal Ortiz',
   slogan: 'IT & Cybersecurity Student',
   avatar: 
-  'https://api.dicebear.com/10.x/lorelei/svg?beardVariant=&earringsVariant=&eyebrowsVariant=variant07&mouthVariant=happy01&headVariant=variant04&hairAccessoriesVariant=&hairVariant=variant35&noseVariant=variant02&eyesVariant=variant23&frecklesColor=&seed=Felix'
+  'https://api.dicebear.com/10.x/lorelei/svg?beardVariant=&earringsVariant=&eyebrowsVariant=variant07&mouthVariant=happy01&headVariant=variant04&hairAccessoriesVariant=&hairVariant=variant35&noseVariant=variant02&eyesVariant=variant23&frecklesColor=&seed=Felix',
+  links: [
+    {
+      id: 1,
+      title: 'GitHub',
+      url: 'https://github.com/kortiz28-bit',
+      icon: 'code',
+      description: 'Check out my projects',
+    },
+    {
+      id: 2,
+      title: 'South Texas College',
+      url: 'https://www.southtexascollege.edu/',
+      icon: 'cap',
+      description: 'Visit South Texas College',
+    },
+    {
+      id: 3,
+      title: 'Expense Splitter',
+      url: 'https://expense-splitter-vue.kortiz28.workers.dev',
+      icon: 'dollar',
+      description: 'Split expenses between friends',
+    },
+  ]
 })
 </script>
 
@@ -15,7 +38,7 @@ const profile = ref({
     <!-- Profile Header -->
      <div class="mb-8 flex flex-col items-center text-center">
        <div
-         class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-green-400 shadow-lg shadow-green-500/20">
+         class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-blue-400 shadow-lg shadow-blue-500/20">
        
          <img
            :src="profile.avatar"
@@ -32,15 +55,19 @@ const profile = ref({
     <!-- Link List-->
     <div class="flex w-full max-w-md flex-col gap-4">
       <LinkCard 
-        v-for="x of [1, 2, 3]"
-        :key="x"
+        v-for="link in profile.links"
+        :key="link.id"
+        :title="link.title"
+        :url="link.url"
+        :description="link.description"
+        :icon="link.icon"
       />
     </div>
 
     <!-- Navigate to Info -->
     <RouterLink 
       to="/info" 
-      class="mt-8 text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-green-400 hover:underline"
+      class="mt-8 text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-blue-400 hover:underline"
     > About me ➡ </Routerlink>
   </main>
 </template>
