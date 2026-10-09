@@ -29,6 +29,13 @@ const profile = ref({
       icon: 'dollar',
       description: 'Split expenses between friends',
     },
+    {
+      id: 4,
+      title: 'Anime Roulette Machine',
+      url: 'https://anime-roulette-watchlist-6mg.pages.dev/',
+      icon: 'gamepad',
+      description: 'Random anime from Tenrai API (Jikan replacement)',
+},
   ]
 })
 </script>
